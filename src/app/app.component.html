@@ -1,0 +1,39 @@
+<h2>Export Data as excel file in Angular</h2>
+<hr />
+<div class="d-flex">
+  <h4>Employees Data :</h4>
+  <button class="btn btn-success p-1 mx-5" (click)="exportAsXLSX()">
+    Export
+  </button>
+</div>
+<hr />
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">SN.</th>
+      <th scope="col">UserId</th>
+      <th scope="col">JT</th>
+      <th scope="col">FN</th>
+      <th scope="col">LN</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+      <th scope="col">Region</th>
+      <th scope="col">No.</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ employee.userId }}</td>
+      <td>{{ employee.jobTitleName }}</td>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.preferredFullName }}</td>
+      <td>{{ employee.employeeCode }}</td>
+      <td>{{ employee.region }}</td>
+      <td>{{ employee.phoneNumber }}</td>
+      <td>{{ employee.emailAddress }}</td>
+    </tr>
+  </tbody>
+</table>
